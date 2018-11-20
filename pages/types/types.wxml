@@ -1,0 +1,39 @@
+<view class='nav-bar'>
+  <scroll-view class='n' scroll-x="true">
+  <view class="items">
+      <view><view class='{{currentType=="top"?"selected":"normal"}}' bindtap='select' id="top">头条</view></view>
+      <view><view class='{{currentType=="shehui"?"selected":"normal"}}' bindtap='select' id="shehui">社会</view></view>
+      <view><view class='{{currentType=="guonei"?"selected":"normal"}}' bindtap='select' id="guonei">国内</view></view>
+      <view><view class='{{currentType=="guoji"?"selected":"normal"}}' bindtap='select' id="guoji">国际</view></view>
+      <view><view class='{{currentType=="yule"?"selected":"normal"}}' bindtap='select' id="yule">娱乐</view></view>
+      <view><view class='{{currentType=="tiyu"?"selected":"normal"}}' bindtap='select' id="tiyu">体育</view></view>
+      <view><view class='{{currentType=="junshi"?"selected":"normal"}}' bindtap='select' id="junshi">军事</view></view>
+      <view><view class='{{currentType=="keji"?"selected":"normal"}}' bindtap='select' id="keji">科技</view></view>
+      <view><view class='{{currentType=="caijing"?"selected":"normal"}}' bindtap='select' id="caijing">财经</view></view>
+      <view><view class='{{currentType=="shishang"?"selected":"normal"}}' bindtap='select' id="shishang">时尚</view></view>
+  </view>
+
+  </scroll-view>
+  <view class='plus'>+</view>
+</view>
+
+
+<scroll-view class="news-scroll" scroll-y="true">
+  <view class='news-list'>
+    <block wx:for="{{newsList}}" wx:key="uniquekey">
+    <view class='news-item' bindtap='showDetail' id="{{item.url}}">
+      <view class='title'><text>{{item.title}}</text></view>
+        <view class='news-photos'>
+          <view> <image src="{{item.thumbnail_pic_s}}"/></view>
+          <view> <image src="{{item.thumbnail_pic_s02}}"/></view>
+          <view> <image src="{{item.thumbnail_pic_s03}}"/></view>
+        </view>
+        <view class='news-info'>
+          <view class='autoher'>{{item.author_name}}</view>
+          <view class='data'>{{item.date}}</view>
+        </view>
+        <view class='hr'></view>
+    </view>
+     </block>
+  </view>
+</scroll-view>

@@ -1,0 +1,12 @@
+map{
+  width: 100vw;
+  height: 100vh;
+}
+cover-view{
+  width: 100px;
+  height: 100px;
+  background: #0f0;
+  text-align: center;
+  line-height: 100px;
+  border-radius: 50px;
+}
